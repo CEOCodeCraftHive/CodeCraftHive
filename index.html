@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCraftHive</title>
+
+    <!-- Linked files  -->
+    <link rel="shortcut icon" href="Fav-Icon/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+
+</head>
+<body id="body">
+
+    <!-- Scroll icons  -->
+    <img onclick="scrolldown()" id="down" class="scroll-down" src="assets/Images/scroll-icon.png" alt="This is a scroll-down-icon">
+    <img id="up" class="scroll-up" src="assets/Images/scroll-icon.png" alt="This is a scroll-up-icon">
+
+    <!-- header section start -->
+    <header class="dark-background">
+        <div class="header-content middle-container">
+            <div class="logo">
+                <img src="assets/Images/logo.png" alt="This is a picture logo.">
+            </div>
+            <navbar class="vertically-center">
+                <ul>
+                    <li><a class="white roboto small-heading" href="#">HOME</a></li>
+                    <li><a class="white roboto small-heading" href="#">SERVICES</a></li>
+                    <li><a class="white roboto small-heading" href="#">PROJECTS</a></li>
+                    <li><a class="white roboto small-heading" href="#">OUR-TEAM</a></li>
+                    <li><a class="white roboto small-heading" href="contact-us.html">CONTACT</a></li>
+                    <li><a class="white roboto small-heading" href="#">ABOUT</a></li>
+                </ul>
+                <div id="menu" class="menu-icon">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div>
+                <div id="cancel" class="cancel-icon vertically-center">
+                    <img src="assets/Images/cancel.png" alt="cancel-icon">
+                </div>
+            </navbar>
+        </div>
+        <div id="re-menu" class="menu dark-background">
+            <ul>
+                <li><a class="white roboto small-heading" href="#">HOME</a></li>
+                    <li><a class="white roboto small-heading" href="#">SERVICES</a></li>
+                    <li><a class="white roboto small-heading" href="#">PROJECTS</a></li>
+                    <li><a class="white roboto small-heading" href="#">OUR-TEAM</a></li>
+                    <li><a class="white roboto small-heading" href="contact-us.html">CONTACT</a></li>
+                    <li><a class="white roboto small-heading" href="#">ABOUT</a></li>
+                </ul>
+        </div>
+    </header>
+    <!-- scripts for header  -->
+    <script>
+        const header = document.getElementById('body');
+        window.addEventListener('scroll', function() {
+        if (window.scrollY > 0) {
+            header.classList.add('sticky');
+        } else {
+            header.classList.remove('sticky');
+        }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var div1 = document.getElementById("menu");
+            var div2 = document.getElementById("cancel");
+            var div3 = document.getElementById("re-menu");
+            
+            function handleResize() {
+                if (window.innerWidth <= 920) {
+                    div1.style.display = "flex";
+                    div2.style.display = "none";
+                    div3.style.display = "none";
+                    div1.addEventListener("click", function() {
+                        div1.style.display = "none";
+                        div2.style.display = "block";
+                        div3.style.display = "block";
+                    });
+                    div2.addEventListener("click", function() {
+                        div2.style.display = "none";
+                        div3.style.display = "none";
+                        div1.style.display = "flex";
+                    });
+                } else {
+                    div1.style.display = "none";
+                    div2.style.display = "none";
+                    div3.style.display = "none";
+                }
+            }
+    
+            // Event listener for window resize
+            window.addEventListener('resize', handleResize);
+    
+            // Call the handleResize function initially to set the initial state based on window width
+            handleResize();
+        });
+    </script>
+    
+    <!-- Header Section end  -->
+
+
+    <!-- Main Section Start  -->
+
+    <!-- Introduction-section  -->
+    <main id="main" class="dark-background standard-height main">
+        <div class="parts part1">
+            <ul>
+                <li><a href="#"><img id="facebook" src="assets/Images/facebook-white.png" alt="Icon for facebook...!"></a></li>
+                <li><a href="#"><img id="whattsapp" src="assets/Images/whattsapp-white.png" alt="Icon for whattsapp...!"></a></li>
+                <li><a href="#"><img id="linkedin" src="assets/Images/linkedin-white.png" alt="Icon for linkedin...!"></a></li>
+                <li><a href="#"><img id="instagram" src="assets/Images/instagram-white.png" alt="Icon for instagram...!"></a></li>
+                <li><a href="#"><img id="twitter" src="assets/Images/twitter-white.png" alt="Icon for twitter-x...!"></a></li>
+            </ul>
+        </div>
+        <div class="parts part2">
+            <div class="section section1">
+                <h1 class="light-blue"><span class="brown">CODE CRAFT</span> HIVE</h1><br>
+                <h2 class="white roboto">A DIGITAL SOFTWARE HOUSE</h2>
+                <p class="white roboto small-heading">"Welcome to Code Craft Hive, where innovation meets expertise. We craft cutting-edge custom and WordPress websites that bring your vision to life with precision and creativity. Let us elevate your brand and online experience."</p>
+            </div>
+            <div class="section section2">
+                <img src="assets/Images/Software-house-main-page.png" alt="Main Picture icon!">
+            </div>
+        </div>
+        <div class="parts part3">
+            <div class="nav-text">
+                <h3 class="white small-heading2">INTRODUCTION</h3>
+            </div>
+        </div>
+    </main>
+
+    <!-- Services Introduction Section  -->
+    <div id="main2" class="main2 standard-height middle-container">
+        <div class="services-intro-left">
+            <img class="standard-image" src="assets/Images/web-services.png" alt="This is services icon image.">
+        </div>
+        <div class="services-intro-right">
+            <h1 class="heading">OUR SERVICES</h1>
+            <div class="services-box">
+                <div class="ser-box">
+                    <div class="ser-left" >
+                        <div></div>
+                        <img src="assets/Images/custom-web-dev-icon.png" alt="Custom web development icon.">
+                    </div>
+                    <div class="ser-right"></div>
+                </div>
+                <div class="ser-box"></div>
+                <div class="ser-box"></div>
+                <div class="ser-box"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact us Section  -->
+    <div class="contact-us standard-height middle-container"></div>
+    <!-- Main Section Ends  -->
+
+    <!-- Footer Section Start  -->
+    <footer class="dark-background">
+        <div class="middle-container section section-webAnalytics">
+            <h1 class="roboto brown small-heading2">ANALYTICS</h1>
+            <h2 class="small-heading white serif ">USER's SATISFACTION:</h2>
+            <div class="progress-border">
+                <div class="progress brown"></div>
+            </div>
+            <h2 class="small-heading white serif ">WEBSITE's PERFORMANCE:</h2>
+            <div class="progress-border">
+                <div style="width: 95%;" class="progress"></div>
+            </div>
+        </div>
+        <div class="middle-container section section-menu">
+            <h1 class="roboto brown small-heading2">ABOUT US</h1>
+            <ul>
+                <li style="margin-top: 1.8rem; list-style: none;"><a href="#"><img style="width: 1.8rem; height: 1.8rem; display: inline-block;" src="assets/Images/education-icon.png" alt="Education Icon"><h2 style="display: inline-block; margin-left: 1rem;" class="roboto small-heading white" >EDUCATION</h2></a></li>
+                <li style="margin-top: 1.8rem; list-style: none;"><a href="#"><img style="width: 1.8rem; height: 1.8rem; display: inline-block;" src="assets/Images/experience-icon.png" alt="Education Icon"><h2 style="display: inline-block; margin-left: 1rem;" class="roboto small-heading white" >EXPERIENCE</h2></a></li>
+                <li style="margin-top: 1.8rem; list-style: none;"><a href="#"><img style="max-width: 1.8rem; max-height: 1.8rem; display: inline-block;" src="assets/Images/services-icon.png" alt="Education Icon"><h2 style="display: inline-block; margin-left: 1rem;" class="roboto small-heading white" >SERVICES</h2></a></li>
+                <li style="margin-top: 1.8rem; list-style: none;"><a href="#"><img style="width: 1.8rem; height: 1.8rem; display: inline-block;" src="assets/Images/portfolio-icon.png" alt="Education Icon"><h2 style="display: inline-block; margin-left: 1rem;" class="roboto small-heading white" >PORTFOLIO</h2></a></li>
+            </ul>
+        </div>
+        <div class="middle-container section section-contact">
+            <h1 class="roboto brown small-heading2">FIND US</h1>
+            <ul>
+                <li style="margin-top: 1.8rem; list-style: none;"><a href="#"><img style="width: 1.8rem; height: 1.8rem; display: inline-block;" src="assets/Images/call-icon.png" alt="Education Icon"><h2 style="display: inline-block; margin-left: 1rem;" class="roboto small-heading white" >+92 348 9957248</h2></a></li>
+                <li style="margin-top: 1.8rem; list-style: none;"><a href="#"><img style="width: 1.8rem; height: 1.8rem; display: inline-block;" src="assets/Images/email-icon.png" alt="Education Icon"><h2 style="display: inline-block; margin-left: 1rem;" class="roboto small-heading white" >mailtoalipc</h2></a></li>
+                <li style="margin-top: 1.8rem; list-style: none;"><a href="#"><img style="width: 1.8rem; height: 1.8rem; display: inline-block;" src="assets/Images/facebook-icon.jpg" alt="Education Icon"><h2 style="display: inline-block; margin-left: 1rem;" class="roboto small-heading white" >@facebook</h2></a></li>
+                <li style="margin-top: 1.8rem; list-style: none;"><a href="#"><img style="max-width: 1.8rem; max-height: 1.8rem; display: inline-block;" src="assets/Images/instagram-icon.png" alt="Education Icon"><h2 style="display: inline-block; margin-left: 1rem;" class="roboto small-heading white" >@instagram</h2></a></li>
+            </ul>
+        </div>
+    </footer>
+    <div style="text-align: center;" class="developer dark-background">
+        <h2 style="font-size: 1.4rem;" class="white roboto small-heading">Website is developed and managed by SYED ALI ABBAS NAQVI - &copy;2024</h2>
+    </div>
+    <!-- Footer Section End  -->
+    
+
+    <!-- Scripts for transitions  -->
+    <script>
+        function scrolldown(){
+            window.scrollBy(0,window.innerHeight);
+            document.getElementById('down').style.filter('invert:100%');
+        }
+    </script>
+
+    <!-- Scripts for hover -->
+    <script>
+            var image = document.getElementById('facebook');
+            var image1 = document.getElementById('whattsapp');
+            var image2 = document.getElementById('instagram');
+            var image3 = document.getElementById('linkedin');
+            var image4 = document.getElementById('twitter');
+            // Facebook
+            image.addEventListener('mouseover', function() {
+            image.src = 'assets/images/facebook-brown.png';
+             });
+
+             image.addEventListener('mouseout', function() {
+             image.src = 'assets/images/facebook-white.png';
+            });
+            
+            // Whattsapp
+            image1.addEventListener('mouseover', function() {
+                image1.src = 'assets/images/whattsapp-brown.png';
+             });
+
+             image1.addEventListener('mouseout', function() {
+                image1.src = 'assets/images/whattsapp-white.png';
+            });
+            
+            // Instagram
+            image2.addEventListener('mouseover', function() {
+                image2.src = 'assets/images/instagram-brown.png';
+             });
+
+             image2.addEventListener('mouseout', function() {
+                image2.src = 'assets/images/instagram-white.png';
+            });
+            
+            // Linkedin
+            image3.addEventListener('mouseover', function() {
+                image3.src = 'assets/images/linkedin-brown.png';
+             });
+
+             image3.addEventListener('mouseout', function() {
+                image3.src = 'assets/images/linkedin-white.png';
+            });
+            
+            // Twitter
+            image4.addEventListener('mouseover', function() {
+                image4.src = 'assets/images/twitter-brown.png';
+             });
+
+             image4.addEventListener('mouseout', function() {
+                image4.src = 'assets/images/twitter-white.png';
+            });
+            
+    </script>
+    
+</body>
+</html>
